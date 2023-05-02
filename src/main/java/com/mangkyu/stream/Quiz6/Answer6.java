@@ -43,7 +43,8 @@ public class Answer6 {
 
     public Map<Integer, Map<Integer, Integer>> quiz2() {
         return Stream.of(stuArr)
-                .collect(groupingBy(Student::getHak, groupingBy(Student::getBan, summingInt(Student::getScore))));
+                .collect(groupingBy(Student::getHak,
+                        groupingBy(Student::getBan, summingInt(Student::getScore))));
     }
 
 }
